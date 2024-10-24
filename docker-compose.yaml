@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.12
+    secrets:
+      - db-password
+    environment:
+      - POSTGRES_PASSWORD=/run/secrets/db-password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - netback
+    expose:
+      - 5432
+    restart: always
+
+  backend:
+    build:
+      context: backend
+    environment:
+      - FLASK_DB_PASSWORD=/run/secrets/db-password
+      - FLASK_DB_HOST=db
+    scale: 2
+    expose:
+      - 5000
+    networks:
+      - netback
+      - netfront
+    depends_on:
+      - db
+    restart: always
+
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - 3000:80
+    networks:
+      - netfront
+    depends_on:
+      - backend
+    restart: always
+    
+
+secrets:
+  db-password:
+    file: db/password.txt
+
+volumes:
+  db-data:
+  
+networks:
+  netback:
+  netfront:
+    
