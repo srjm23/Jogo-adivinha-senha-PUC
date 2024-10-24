@@ -19,14 +19,14 @@ Este é um jogo de adivinhação, onde você tenta descobrir uma senha gerada al
 1. Primeiro, clone o repositório (código do jogo) para o seu computador:
 
  ```bash
-  git clone https://github.com/srjm23/Jogo-adivinha-senha-PUC.git
-  cd Jogo-adivinha-senha-PUC
+git clone https://github.com/srjm23/Jogo-adivinha-senha-PUC.git
+cd Jogo-adivinha-senha-PUC
 ```
 
 2. Depois, rode o jogo usando Docker Compose:
 
 ```bash
-  docker-compose up -d
+docker-compose up -d
 ```
 
 3. Agora, abra o navegador e acesse o jogo em: [http://localhost:3000](http://localhost:3000) 🎮
@@ -176,12 +176,12 @@ Está habilitado nos serviços o **restart: always** que garante que eles sejam 
 Para atualizar o backend, frontend ou banco de dados, basta modificar a versão da imagem Docker ou alterar o código fonte e executar o seguinte comando:
 
 ```bash
-  docker-compose up --build
+docker-compose up --build
 ```
 ### Remoção da infra
 
 Caso não queira mais jogar e com isso deseje remover a infraestrutura de container, basta executar o comando:
 
 ```bash
-  docker-compose down
+docker-compose down
 ```
