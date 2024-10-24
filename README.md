@@ -26,7 +26,7 @@ Este é um jogo de adivinhação, onde você tenta descobrir uma senha gerada al
 2. Depois, rode o jogo usando Docker Compose:
 
    ```bash
-   docker compose up -d
+   docker-compose up -d
    ```
 
 3. Agora, abra o navegador e acesse o jogo em: [http://localhost:3000](http://localhost:3000) 🎮
