@@ -18,16 +18,16 @@ Este é um jogo de adivinhação, onde você tenta descobrir uma senha gerada al
 
 1. Primeiro, clone o repositório (código do jogo) para o seu computador:
 
-   ```bash
-   git clone https://github.com/srjm23/Jogo-adivinha-senha-PUC.git
-   cd Jogo-adivinha-senha-PUC
-   ```
+ ```bash
+  git clone https://github.com/srjm23/Jogo-adivinha-senha-PUC.git
+  cd Jogo-adivinha-senha-PUC
+```
 
 2. Depois, rode o jogo usando Docker Compose:
 
-   ```bash
-   docker-compose up -d
-   ```
+```bash
+  docker-compose up -d
+```
 
 3. Agora, abra o navegador e acesse o jogo em: [http://localhost:3000](http://localhost:3000) 🎮
 
